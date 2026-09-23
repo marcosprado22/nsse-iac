@@ -8,9 +8,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "nsse-terraform-state-files"
-    key    = "server/terraform.tfstate"
-    region = "us-east-1"
+    bucket         = "nsse-terraform-state-files"
+    key            = "server/terraform.tfstate"
+    region         = "us-east-1"
     dynamodb_table = "nsse-terraform-state-locking"
   }
 }
